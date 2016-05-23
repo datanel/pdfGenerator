@@ -5,6 +5,7 @@ require_once realpath(dirname(__FILE__) . '/../vendor/autoload.php');
 use Knp\Snappy\Pdf;
 
 $parsedUrl = parse_url($_GET['url']);
+//var_dump($parsedUrl);die;
 $url = $_GET['url'];
 
 if ($parsedUrl != false) {
@@ -13,7 +14,7 @@ if ($parsedUrl != false) {
         $url = 'http://' . $_GET['url'];
     }
 
-    $snappy = new Pdf('xvfb-run -s \'-screen 0 1100x1024x16\' -a wkhtmltopdf');
+    $snappy = new Pdf('xvfb-run -s \'-screen 0 1100x1024x16\' -a ../vendor/bin/wkhtmltopdf-amd64');
 
     $snappy->setOption('lowquality', false);
     $snappy->setOption('disable-javascript', true);

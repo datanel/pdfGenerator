@@ -16,7 +16,8 @@
     ],
     "require": {
         "php": ">=5.3.2",
-        "knplabs/knp-snappy": "0.2.1"
+        "knplabs/knp-snappy": "0.2.1",
+        "h4cc/wkhtmltopdf-amd64": "^0.12.3"
     },
     "autoload": {
         "classmap": [ "." ]
